@@ -14,6 +14,9 @@ const Doctor = new Schema({
     phone: {
         type: String
     },
+    fee: {
+        type: String
+    },
     cnic: {
         type: String
     },
@@ -51,9 +54,7 @@ const Doctor = new Schema({
         default: 0
     }
 });
-
 Doctor.plugin(mongoosePaginate);
-
 Doctor.methods.toJSON = function() {
     var obj = this.toObject();
     delete obj.password;

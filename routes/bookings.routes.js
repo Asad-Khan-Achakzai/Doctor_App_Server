@@ -7,11 +7,12 @@ let http = require('http').Server(express);
 const bookingController = require('../controllers/bookings.controllers');
 const checkAuth = require('../middleware/check-auth');
 
-router.post("/registerBooking",bookingController.registerBooking);
+// router.post("/registerBooking",bookingController.registerBooking);
 router.post("/myAppointments",bookingController.getBooking);
 router.post("/doctorAppointments",bookingController.getDoctorBooking);
 router.post("/appointmentDiagnosed",bookingController.appointmentDiagnosed);
 router.post("/appointments",bookingController.getAppontment);
 router.post("/deleteAppontement",bookingController.deleteAppointment);
+router.post("/apponintmentPayment",bookingController.newcustomer);
 
 module.exports = router;    
